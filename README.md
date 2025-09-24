@@ -1,5 +1,7 @@
 # DXF-LABEL-SCRIPT
 
+This script is part of a workflow that pushes CAD and engineering requirements into data for production composites manufacutring. One component of this process is generating ply shapes for automated CNC cutting and labelling. Placing label text on each ply was previsouly a time consuming bottleneck that required engineers to look at each ply and carefully adjust the text size, rotation, and position. This script automates that step, and significantly reduces the amount of engineering time required for each part that is pushed into production. 
+
 This script processes DXF files from a specified folder to add or update text labels. It's designed to automatically find the largest possible area for text placement within a polygon, avoiding specified "no-go" zones. The modified files are then saved back to the original folder.
 
 ## Prerequisites
