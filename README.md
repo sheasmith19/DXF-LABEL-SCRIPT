@@ -52,7 +52,7 @@ The script operates in a sequence of steps for each DXF file it finds in the spe
 ## Some Key Functions
 
 1. **get_vertices** generates a list containing sublists of tuple vertex coordinates. It looks for all the accepted contour types in the specified layer and starts by adding each element to the vertices_list as a sublist. This means each individual line element, or arc, for example is in its own sublist. Once all the initial contours are populated into the vertices_list, **sort_curves** looks at their vertices and combines sublists that have coincident terminal points (are connected). The function appends the two sublists in the correct order so that all the vertices are sequential (consistently ordered CW or CCW). Shapely’s Polygon function requires that all vertices are sequentially ordered so that lines aren’t drawn across the polygon and instead extend from one outer contour point to the next.
-2. **place_first_line_text** and **place_second_line_text** place the text based on the optimized centroid location, scaling, and angle of the fitting rectangle. DXF TEXT entities are always located with a point at the bottom left, meaning the functions have to translate from the centroid point to the desired location for the bottom left of the text (see Figure 1).
+2. **place_first_line_text** and **place_second_line_text** place the text based on the optimized centroid location, scaling, and angle of the fitting rectangle. DXF TEXT entities are always located with a point at the bottom left, meaning the functions have to translate from the centroid point to the desired location for the bottom left of the text.
 
 ## How to Use
 
