@@ -669,7 +669,7 @@ for filename in uploaded.keys():
         for rect_height in np.linspace(0.51,
                                        math.sqrt(ply_polygon.area),
                                        scale_resolution):
-            #...and a bunch of angles
+            #...and a bunch of angles...
             for angle in np.linspace(0,
                                      180,
                                      angle_resolution):
