@@ -54,18 +54,8 @@ The script operates in a sequence of steps for each DXF file it finds in the spe
 
 ## How to Use
 
-1. **Modify the parameters**:
-    - Change the file_path variable to the absolute path of the folder containing your DXF files.  
-        file_path = '/path/to/your/dxf_files'
-    - Change other parameter settings as needed. The following variables can be modified to tune performance:
-        - The **char_ratio** variable controls the width of each glyph of text relative to its height, which is used for placing the text and sizing the fitting rectangle. Since DXF text geometry is not intrinsic to the file but rather the program used to view it, the display font may vary and thus the char_ratio may need to be adjusted. A good char_ratio will keep the two lines of text centered in the bounding box. To tune char ratio, uncomment the draw_rectangle call to display the bounding box on exported DXFs.
-        - The **slice_length** variable controls the resolution at which the script converts curved entities into sequences of lines so they can be converted to polygon vertices. A lower value will yield more slices and a higher resolution.
-        - The **round_digits** variable controls the number of digits to round for the endpoints of sliced curves. Rounding ensures that sliced curves intersect and form closed contours.
-        - The **padding** variable controls how much padding, as a ratio of the text_height should be placed around the text inside the fitting rectangle
-        - The **line_space** variable controls how much space is added between the two lines of text as a ratio of the text_height
-        - Other variables in the PARAMETER CONTROLS section can be adjusted, and their functions are straightforward and explained in comments.
-2. **Run the Script**
-3. **Provide Input**:
+1. **Run the Script**
+2. **Provide Input**:
     - The script will prompt you for three inputs:
         - **First line text**: Enter the text for the first line (e.g., L). Use L as a placeholder for the ply number you want to extract from the filename.
         - **ply prefix in filenames**: Enter the prefix that precedes the ply number in your filenames (e.g., L. for ...L.27...).
